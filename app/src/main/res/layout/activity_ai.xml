@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AiActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/luckiest_guy"
+        android:text="O turn"
+        android:textColor="@color/blueZero"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/restart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/xDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/luckiest_guy"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/turn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/yDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/luckiest_guy"
+        android:text="0"
+        android:textSize="40sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/turn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:fontFamily="@font/luckiest_guy"
+        android:onClick="restartGame"
+        android:padding="10sp"
+        android:text="RESTART"
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/leftPlayer"
+        android:layout_width="129dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/finger_paint"
+        android:text="left player"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/turn"
+        app:layout_constraintStart_toEndOf="@+id/xDisplay" />
+
+    <TextView
+        android:id="@+id/rightPlayer"
+        android:layout_width="146dp"
+        android:layout_height="93dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/finger_paint"
+        android:text="right player"
+        android:textAlignment="textEnd"
+        android:textColor="@color/blueZero"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/turn"
+        app:layout_constraintEnd_toStartOf="@+id/yDisplay" />
+
+</android.support.constraint.ConstraintLayout>
